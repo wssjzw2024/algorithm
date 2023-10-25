@@ -6,7 +6,7 @@ import java.util.Map;
 /**
  * @author liu
  */
-public class TwoSum {
+public class TwoSum001 {
 
     /**
      * 暴力枚举
