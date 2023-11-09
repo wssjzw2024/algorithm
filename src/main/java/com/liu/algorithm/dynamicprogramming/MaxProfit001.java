@@ -45,7 +45,7 @@ public class MaxProfit001 {
      * 4.i+1天结束时没有持有。i天结束时没有，或者i天结束持有，i+1天卖出
      * dp[i][0] = Math.max(dp[i - 1][0],dp[i - 1][1] + prices[i])
      * 5.i+1天结束式持有，i天结束时没有，i + 1 天买入，i天结束持有
-     * 6、dp[i][1] = Math.max(dp[i - 1][1],dp[i - 1][0] - prices[i])
+     * 6、dp[i][1] = Math.max(dp[i - 1][1],- prices[i])
      * 7.dp[0][0] = 0;
      * 8.dp[0][1] = -prices[0];
      * 9最后结果 dp[length - 1][0]
