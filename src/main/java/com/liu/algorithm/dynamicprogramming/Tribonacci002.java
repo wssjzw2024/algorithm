@@ -3,7 +3,7 @@ package com.liu.algorithm.dynamicprogramming;
 /**
  * @author liu
  */
-public class Tribonacci007 {
+public class Tribonacci002 {
     /**
      * 动态规划
      * 思路

@@ -78,7 +78,7 @@ public class MaxSubArray002 {
             return nums[left];
         }
         int mid = left + (right - left)/2;
-        return max3(maxSubArraySum(nums,left,right),
+        return max3(maxSubArraySum(nums,left,mid),
             maxSubArraySum(nums,mid + 1,right),
             maxCrossingSum(nums,left,mid,right));
     }

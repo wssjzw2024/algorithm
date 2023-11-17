@@ -3,7 +3,7 @@ package com.liu.algorithm.dynamicprogramming;
 /**
  * @author liu
  */
-public class GetMoneyAmount007 {
+public class GetMoneyAmount003 {
     /**
      * 动态规划
      * 思路

@@ -3,7 +3,7 @@ package com.liu.algorithm.dynamicprogramming;
 /**
  * @author liu
  */
-public class FindTargetSumWayS006 {
+public class FindTargetSumWayS001 {
 
 
     /**
