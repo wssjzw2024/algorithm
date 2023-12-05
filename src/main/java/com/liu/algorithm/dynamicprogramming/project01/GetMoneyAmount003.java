@@ -1,4 +1,4 @@
-package com.liu.algorithm.dynamicprogramming;
+package com.liu.algorithm.dynamicprogramming.project01;
 
 /**
  * @author liu
@@ -7,7 +7,7 @@ public class GetMoneyAmount003 {
     /**
      * 动态规划
      * 思路
-     * 用 f(i,j)f(i, j)f(i,j) 表示在范围 [i,j][i, j][i,j] 内确保胜利的最少金额，目标是计算 f(1,n)f(1, n)f(1,n)
+     * 用 f(i,j)表示在范围 [i,j]内确保胜利的最少金额，目标是计算 f(1,n)
      * f(1,n)=x+max(f(1,x−1),f(x+1,n))。
      * 步骤
      * 1. i位置从 n-1开始 ，到等于1结束

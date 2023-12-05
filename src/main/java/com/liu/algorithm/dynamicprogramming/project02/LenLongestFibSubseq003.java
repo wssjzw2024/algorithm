@@ -1,4 +1,4 @@
-package com.liu.algorithm.dynamicprogramming;
+package com.liu.algorithm.dynamicprogramming.project02;
 
 import java.util.HashMap;
 import java.util.Map;
