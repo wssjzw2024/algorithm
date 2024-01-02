@@ -3,7 +3,7 @@ package com.liu.algorithm.array;
 /**
  * @author liu
  */
-public class PlusOne001 {
+public class PlusOne002 {
     /**
      * 数学
      * 思路

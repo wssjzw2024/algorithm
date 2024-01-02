@@ -3,7 +3,7 @@ package com.liu.algorithm.array;
 /**
  * @author liu
  */
-public class PivotIndex002 {
+public class PivotIndex003 {
     /**
      * 前缀和
      * 思路
