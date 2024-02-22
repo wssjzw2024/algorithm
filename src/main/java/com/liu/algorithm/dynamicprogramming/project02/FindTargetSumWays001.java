@@ -1,4 +1,4 @@
-package com.liu.algorithm.dynamicprogramming.project01;
+package com.liu.algorithm.dynamicprogramming.project02;
 
 /**
  * @author liu
