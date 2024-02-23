@@ -5,6 +5,17 @@ package com.liu.algorithm.array.project02;
  */
 public class BubbleSort {
 
+    /**
+     * 冒泡排序
+     * 思路
+     *  相互比较
+     * 步骤
+     *  1.从len个数拍讯
+     *  2.从前向后，两两比较
+     *  3.将最大值排到最后
+     *  4.循环直到所有的有序
+     * @param nums
+     */
     public void sort(int[] nums){
         int len = nums.length;
         for (int i = len - 1; i >= 0; i--) {
