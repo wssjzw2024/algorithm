@@ -18,14 +18,14 @@ public class MergeSort {
     public void sort(int[] nums){
         int len = nums.length;
         int[] temp = new int[len];
-        decompose(nums,temp,0,len - 1);
+        mergeSort(nums,temp,0,len - 1);
     }
 
-    public void decompose(int[] arr,int[] temp,int left,int right){
+    public void mergeSort(int[] arr,int[] temp,int left,int right){
         if(left < right){
             int mid = (left +right) / 2;
-            decompose(arr, temp, left, mid);
-            decompose(arr,temp,mid + 1,right);
+            mergeSort(arr, temp, left, mid);
+            mergeSort(arr,temp,mid + 1,right);
             merge(arr,temp,left,mid,right);
         }
     }
