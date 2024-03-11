@@ -1,4 +1,6 @@
-package com.liu.algorithm.linkedlist;
+package com.liu.algorithm.linkedlist.project01;
+
+import com.liu.algorithm.linkedlist.ListNode;
 
 /**
  * @author liu

@@ -4,8 +4,8 @@ package com.liu.algorithm.linkedlist;
  * @author liu
  */
 public class ListNode {
-    int val;
-    ListNode next;
+    public int val;
+    public ListNode next;
 
     public ListNode() {
     }
