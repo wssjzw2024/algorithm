@@ -7,13 +7,13 @@ public class Trap004 {
     public int trap(int[] height){
         int ans = 0;
         int len = height.length;
-        if(len < 3){
+        if(len == 0){
             return 0;
         }
-        int left_max_arr[] = new int[len - 1];
-        int right_max_arr[] = new int[len - 1];
-         left_max_arr[0] = height[0];
-         right_max_arr[0] = height[len - 1];
+        int left_max_arr[] = new int[len ];
+        int right_max_arr[] = new int[len ];
+        left_max_arr[0] = height[0];
+        right_max_arr[len - 1] = height[len - 1];
         for (int i = 1; i < len; i++) {
             left_max_arr[i] = Math.max(left_max_arr[i - 1],height[i]);
         }
