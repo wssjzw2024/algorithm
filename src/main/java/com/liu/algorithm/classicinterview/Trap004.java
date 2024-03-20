@@ -10,8 +10,8 @@ public class Trap004 {
         if(len == 0){
             return 0;
         }
-        int left_max_arr[] = new int[len ];
-        int right_max_arr[] = new int[len ];
+        int left_max_arr[] = new int[len];
+        int right_max_arr[] = new int[len];
         left_max_arr[0] = height[0];
         right_max_arr[len - 1] = height[len - 1];
         for (int i = 1; i < len; i++) {
