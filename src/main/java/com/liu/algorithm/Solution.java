@@ -1,49 +1,42 @@
 package com.liu.algorithm;
 
+import java.util.Stack;
+
 /**
  * @author liu
  */
 public class Solution {
 
-    public static int count = 0;
-
-    public int findTargetSumWay(int[] nums,int target) {
-        backtrack(nums,target,0,0);
-        return count;
+    class TreeNode{
+        int val;
+        TreeNode left;
+        TreeNode right;
+        TreeNode(){}
+        TreeNode(int val){
+            this.val = val;
+        }
+        TreeNode(int val,TreeNode left,TreeNode right){
+            this.val = val;
+            this.left = left;
+            this.right = right;
+        }
     }
 
-    public void backtrack(int[] nums,int target,int index,int sum){
-        if(index == nums.length){
-            if(target == sum){
-                count++;
+    public TreeNode inverTree(TreeNode root){
+        Stack<TreeNode> stack = new Stack<>();
+        stack.push(root);
+        while (!stack.isEmpty()){
+            TreeNode temp = stack.pop();
+            if(temp.left != null){
+                stack.push(temp.left);
             }
-        }
-        backtrack(nums,target,index + 1,sum + nums[index]);
-        backtrack(nums,target,index + 1,sum - nums[index]);
-    }
-
-    public int findTargetSumWay1(int[] nums,int target) {
-        int len = nums.length;
-        int sum = 0;
-        for(int num:nums){
-            sum += num;
-        }
-        int diff = sum - target;
-        if(diff < 0 || diff % 2 != 0){
-            return 0;
-        }
-        int neg = diff / 2;
-        int[][] dp = new int[len + 1][neg + 1];
-        dp[0][0] = 1;
-        for (int i = 1; i <= len; i++) {
-            int num = nums[i - 1];
-            for (int j = 0; j <= neg ; j++) {
-                dp[i][j] = dp[i - 1][j];
-                if(j > num){
-                    dp[i][j] += dp[i][j - num];
-                }
+            if(temp.right != null){
+                stack.push(temp.right);
             }
+            TreeNode left = temp.left;
+            temp.left = temp.right;
+            temp.right = left;
         }
-        return dp[len][neg];
+        return root;
     }
 }
