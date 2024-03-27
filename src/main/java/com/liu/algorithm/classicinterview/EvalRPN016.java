@@ -6,7 +6,7 @@ import java.util.LinkedList;
 /**
  * @author liu
  */
-public class EvalRPN015 {
+public class EvalRPN016 {
     public int evalRPN(String[] tokens){
         Deque<Integer> stack = new LinkedList<>();
         for(String str:tokens){
