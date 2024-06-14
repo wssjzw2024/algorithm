@@ -1,4 +1,4 @@
-package com.liu.algorithm;
+package com.liu.algorithm.system.datastructure;
 
 /**
  * @author liu
