@@ -1,6 +1,7 @@
 package com.liu.algorithm.system.doublePointerForLinkedList;
 
-import com.liu.algorithm.ListNode;
+
+import com.liu.algorithm.system.datastructure.ListNode;
 
 /**
  * @author liu
