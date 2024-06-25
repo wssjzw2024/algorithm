@@ -1,39 +1,46 @@
 package com.liu.algorithm.system.datastructure.stack;
 
 import java.lang.invoke.SwitchPoint;
+import java.util.ArrayDeque;
+import java.util.Deque;
 import java.util.Stack;
 
 /**
  * @author liu
  */
 public class Calculate02 {
+
     public int calculate(String s){
-        int sum = 0;
-        char[] chars = s.toCharArray();
-        Stack<Integer> stack = new Stack<>();
-        stack.push(chars[0] - '0');
-        for (int i = 1; i < chars.length; i++) {
-            if(Character.isDigit(chars[i])){
-                if(chars[i - 1] == '+'){
-                     stack.push(chars[i] - '0');
-                }else if(chars[i - 1] == '-'){
-                    stack.push(-(chars[i] - '0'));
+        Deque<Integer> stack = new ArrayDeque<Integer>();
+        char preSign = '+';
+        int num = 0;
+        int n = s.length();
+        for (int i = 0; i < n; ++i) {
+            if (Character.isDigit(s.charAt(i))) {
+                num = num * 10 + s.charAt(i) - '0';
+            }
+            if (!Character.isDigit(s.charAt(i)) && s.charAt(i) != ' ' || i == n - 1) {
+                switch (preSign) {
+                    case '+':
+                        stack.push(num);
+                        break;
+                    case '-':
+                        stack.push(-num);
+                        break;
+                    case '*':
+                        stack.push(stack.pop() * num);
+                        break;
+                    default:
+                        stack.push(stack.pop() / num);
                 }
-                if(chars[i - 1] == '*' ){
-                    int pop = stack.pop();
-                    int push = pop * (chars[i] - '0');
-                    stack.push(push);
-                }else if(chars[i - 1] == '/'){
-                    int pop = stack.pop();
-                    int push = pop / (chars[i] - '0');
-                    stack.push(push);
-                }
+                preSign = s.charAt(i);
+                num = 0;
             }
         }
-        while(!stack.isEmpty()){
-            int pop = stack.pop();
-            sum += pop;
+        int ans = 0;
+        while (!stack.isEmpty()) {
+            ans += stack.pop();
         }
-        return sum;
+        return ans;
     }
 }
