@@ -9,7 +9,22 @@ import java.util.Stack;
  * @author liu
  */
 public class Calculate02 {
-
+    /**
+     * 步骤
+     * 1.ArrayDeque作为栈
+     * 2.设置preSign默认为+
+     * 3.设置num = 0
+     * 4.循环字符串
+     * 7.如果是数字，可能是多位，获取值
+     * 8。如果不是数字且不为空，或者 最后一位
+     * 9.根据符号，作不同操作
+     * 10.加 入栈
+     * 11 减 负数入栈
+     * 12 乘除，先弹出操作，再入栈
+     * 13 最后循环出栈，相加
+     * @param s
+     * @return
+     */
     public int calculate(String s){
         Deque<Integer> stack = new ArrayDeque<Integer>();
         char preSign = '+';
