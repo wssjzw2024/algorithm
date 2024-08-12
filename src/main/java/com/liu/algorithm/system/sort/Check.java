@@ -1,6 +1,7 @@
 package com.liu.algorithm.system.sort;
 
 import java.lang.reflect.Method;
+import java.util.Arrays;
 
 public class Check {
 
@@ -16,6 +17,6 @@ public class Check {
 
 
     public static void main(String[] args) {
-        
+        Arrays.sort();
     }
 }
