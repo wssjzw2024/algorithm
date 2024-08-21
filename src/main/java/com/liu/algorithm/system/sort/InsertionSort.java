@@ -3,7 +3,7 @@ package com.liu.algorithm.system.sort;
 /**
  * @author liu
  */
-public class InsertionSort {
+public class InsertionSort implements Sort {
     public void sort(int[] arr) {
         /*
          * 2-n

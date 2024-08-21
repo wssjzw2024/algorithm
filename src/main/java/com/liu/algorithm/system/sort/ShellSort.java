@@ -1,6 +1,6 @@
 package com.liu.algorithm.system.sort;
 
-public class ShellSort {
+public class ShellSort implements Sort{
 
     public  void sort(int[] arr) {
         int len = arr.length;
