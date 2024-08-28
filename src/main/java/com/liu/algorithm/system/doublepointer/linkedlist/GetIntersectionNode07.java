@@ -1,16 +1,16 @@
 package com.liu.algorithm.system.doublepointer.linkedlist;
 
 
-import com.liu.algorithm.system.datastructure.linkedlist.ListNode;
+import com.liu.algorithm.system.datastructure.linkedlist.SingleListNode;
 
 /**
  * @author liu
  */
 public class GetIntersectionNode07 {
 
-    public ListNode getIntersectionNode(ListNode headA, ListNode headB) {
-        ListNode tempA = headA;
-        ListNode tempB = headB;
+    public SingleListNode getIntersectionNode(SingleListNode headA, SingleListNode headB) {
+        SingleListNode tempA = headA;
+        SingleListNode tempB = headB;
 
         while (tempA != tempB) {
             if (tempA == null) {

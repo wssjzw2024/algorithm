@@ -1,6 +1,6 @@
 package com.liu.algorithm.system.doublepointer.linkedlist;
 
-import com.liu.algorithm.system.datastructure.linkedlist.ListNode;
+import com.liu.algorithm.system.datastructure.linkedlist.SingleListNode;
 
 /**
  * @author liu
@@ -20,14 +20,14 @@ public class RemoveNthFromEnd04 {
      * @param n
      * @return
      */
-    public ListNode  removeNthFromEnd(ListNode head, int n) {
+    public SingleListNode removeNthFromEnd(SingleListNode head, int n) {
         if (head == null){
             return null;
         }
-        ListNode dummy = new ListNode(0);
+        SingleListNode dummy = new SingleListNode(0);
         dummy.next = head;
-        ListNode fast = dummy;
-        ListNode slow = dummy;
+        SingleListNode fast = dummy;
+        SingleListNode slow = dummy;
         while (n!=0){
             fast = fast.next;
             n--;

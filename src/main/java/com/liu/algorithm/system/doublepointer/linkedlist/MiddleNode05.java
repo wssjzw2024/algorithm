@@ -1,6 +1,6 @@
 package com.liu.algorithm.system.doublepointer.linkedlist;
 
-import com.liu.algorithm.system.datastructure.linkedlist.ListNode;
+import com.liu.algorithm.system.datastructure.linkedlist.SingleListNode;
 
 /**
  * @author liu
@@ -17,8 +17,8 @@ public class MiddleNode05 {
      * @param head
      * @return
      */
-    public ListNode middleNode(ListNode head) {
-        ListNode fast = head, slow = head;
+    public SingleListNode middleNode(SingleListNode head) {
+        SingleListNode fast = head, slow = head;
         while (fast != null && fast.next != null) {
             fast = fast.next.next;
             slow = slow.next;

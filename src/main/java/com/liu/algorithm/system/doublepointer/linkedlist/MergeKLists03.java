@@ -1,6 +1,6 @@
 package com.liu.algorithm.system.doublepointer.linkedlist;
 
-import com.liu.algorithm.system.datastructure.linkedlist.ListNode;
+import com.liu.algorithm.system.datastructure.linkedlist.SingleListNode;
 
 import java.util.PriorityQueue;
 
@@ -23,19 +23,19 @@ public class MergeKLists03 {
      * @param lists
      * @return
      */
-    public ListNode mergeKLists(ListNode[] lists) {
+    public SingleListNode mergeKLists(SingleListNode[] lists) {
         PriorityQueue<Integer> pq = new PriorityQueue<Integer>();
-        for(ListNode node:lists){
+        for(SingleListNode node:lists){
             while (node!=null){
                 pq.add(node.val);
                 node=node.next;
             }
         }
-        ListNode head = new ListNode(-1);
-        ListNode cur = head;
+        SingleListNode head = new SingleListNode(-1);
+        SingleListNode cur = head;
         while (!pq.isEmpty()){
             int val = pq.poll();
-            cur.next = new ListNode(val);
+            cur.next = new SingleListNode(val);
             cur = cur.next;
         }
         return head.next;
@@ -51,20 +51,20 @@ public class MergeKLists03 {
      * @param lists
      * @return
      */
-    public ListNode mergeKLists1(ListNode[] lists) {
-        ListNode ans = null;
+    public SingleListNode mergeKLists1(SingleListNode[] lists) {
+        SingleListNode ans = null;
         for (int i = 0; i < lists.length; i++) {
             ans = mergeTwoLists(ans, lists[i]);
         }
         return ans;
     }
 
-    private ListNode mergeTwoLists(ListNode l1, ListNode l2) {
+    private SingleListNode mergeTwoLists(SingleListNode l1, SingleListNode l2) {
         if(l1 == null || l2 == null){
             return l1 == null ? l2 : l1;
         }
-        ListNode dummy = new ListNode(0);
-        ListNode cur = dummy;
+        SingleListNode dummy = new SingleListNode(0);
+        SingleListNode cur = dummy;
         while(l1 != null && l2 != null){
             if(l1.val < l2.val){
                 cur.next = l1;

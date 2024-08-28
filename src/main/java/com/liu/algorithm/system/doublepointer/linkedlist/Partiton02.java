@@ -1,6 +1,6 @@
 package com.liu.algorithm.system.doublepointer.linkedlist;
 
-import com.liu.algorithm.system.datastructure.linkedlist.ListNode;
+import com.liu.algorithm.system.datastructure.linkedlist.SingleListNode;
 
 /**
  * @author liu
@@ -29,12 +29,12 @@ public class Partiton02 {
      * @param x
      * @return
      */
-    public ListNode partition(ListNode head, int x) {
+    public SingleListNode partition(SingleListNode head, int x) {
 
-            ListNode small = new ListNode(-1);
-            ListNode smallHead = small;
-            ListNode big = new ListNode(-1);
-            ListNode bigHead = big;
+            SingleListNode small = new SingleListNode(-1);
+            SingleListNode smallHead = small;
+            SingleListNode big = new SingleListNode(-1);
+            SingleListNode bigHead = big;
 
             while (head != null) {
                 if (head.val < x) {

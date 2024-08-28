@@ -1,6 +1,6 @@
 package com.liu.algorithm.system.doublepointer.linkedlist;
 
-import com.liu.algorithm.system.datastructure.linkedlist.ListNode;
+import com.liu.algorithm.system.datastructure.linkedlist.SingleListNode;
 
 /**
  * @author liu
@@ -23,9 +23,9 @@ public class DetectCycle06 {
      * @param head
      * @return
      */
-    public ListNode detectCycle(ListNode head) {
-        ListNode fast = head;
-        ListNode slow = head;
+    public SingleListNode detectCycle(SingleListNode head) {
+        SingleListNode fast = head;
+        SingleListNode slow = head;
         while (fast != null && fast.next != null) {
             fast = fast.next.next;
             slow = slow.next;

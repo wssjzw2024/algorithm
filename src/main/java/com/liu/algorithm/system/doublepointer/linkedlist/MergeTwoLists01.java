@@ -1,6 +1,6 @@
 package com.liu.algorithm.system.doublepointer.linkedlist;
 
-import com.liu.algorithm.system.datastructure.linkedlist.ListNode;
+import com.liu.algorithm.system.datastructure.linkedlist.SingleListNode;
 
 /**
  * @author liu
@@ -33,12 +33,12 @@ public class MergeTwoLists01 {
      * @param list2
      * @return
      */
-    public ListNode mergeTwoLists(ListNode list1, ListNode list2) {
+    public SingleListNode mergeTwoLists(SingleListNode list1, SingleListNode list2) {
         if (list1 == null) return list2;
         if (list2 == null) return list1;
 
-        ListNode dumy = new ListNode(-1);
-        ListNode current = dumy;
+        SingleListNode dumy = new SingleListNode(-1);
+        SingleListNode current = dumy;
         while (list1 != null && list2 != null) {
             if (list1.val < list2.val) {
                 current.next = list1;
@@ -73,7 +73,7 @@ public class MergeTwoLists01 {
      * @param list2
      * @return
      */
-    public ListNode mergeTwoLists1(ListNode list1, ListNode list2) {
+    public SingleListNode mergeTwoLists1(SingleListNode list1, SingleListNode list2) {
         if (list1 == null) {
             return list2;
         }else if (list2 == null) {
