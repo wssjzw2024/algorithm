@@ -7,20 +7,22 @@ import java.util.Map;
 
 
 public class StockSpanner09 {
-    private Deque<Integer> stack;
-    private Map<Integer, Integer> map;
+    private Deque<int[]> stack;
+    private Integer index;
 
     public StockSpanner09(){
-        stack = new ArrayDeque<Integer>();
-        map = new HashMap<>();
+        stack = new ArrayDeque<int[]>();
+        stack.push(new int[]{-1,Integer.MAX_VALUE});
+        index = -1;
     }
 
     public int next(int price){
-
-        while(!stack.isEmpty() && stack.peek() < price){
+        index++;
+        while (!stack.isEmpty() && price >= stack.peek()[1]){
             stack.pop();
         }
-        stack.push(price);
-        return 0;
+        int ans = index - stack.peek()[0];
+        stack.push(new int[]{index,price});
+        return ans;
     }
 }
