@@ -3,7 +3,7 @@ package com.liu.algorithm.system.binarysearch;
 public class SearchInsert01 {
     /**
      * 步骤
-     * 1.初始化左右边界，闭区间，与左闭右开
+     * 1.初始化左右边界，闭区间.
      * 2.初始化index = 最右位置
      * 3.循环比较左右界
      * 4.获取中点位置
