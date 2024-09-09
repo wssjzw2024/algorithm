@@ -1,34 +1,60 @@
 package com.liu.algorithm.system.binarysearch;
 
 public class SearchInsert01 {
+
     /**
+     * 闭区间
      * 步骤
-     * 1.初始化左右边界，闭区间.
-     * 2.初始化index = 最右位置
-     * 3.循环比较左右界
-     * 4.获取中点位置
-     * 5.当目标值小于等于中点位置，记录位置，right=mid - 1
-     * 6.当目标值大于中点位置，left = mid + 1
-     * 7.循环结束
-     * 8.返回index
+     * 1.初始化左边界left为0，右边界为nums.length - 1;
+     * 2.循环 条件 left<=right
+     *   循环体
+     *   获取中点 middle = left + (right - left)/2;
+     *   当nums[middle]小于target，left赋值middle + 1
+     *   否则 left赋值middle - 1
+     * 3.返回left
      * @param nums
      * @param target
      * @return
      */
     public int searchInsert(int[] nums, int target) {
-        int left = 0;
-        int right = nums.length - 1;
-        int index = right;
-        while (left <= right) {
-            int mid = left + (right - left) / 2;
-            if (target <= nums[mid]) {
-                index = mid;
-                right = mid - 1;
+        int left = 0,right = nums.length - 1;
+        while (left <= right){
+            int middle = left + (right - left)/2;
+            if (nums[middle] < target) {
+                left = middle + 1;
             }else {
-                left = mid + 1;
+                right = middle - 1;
             }
         }
-        return index;
+        return left;
     }
 
+    /**
+     * 左闭右开
+     * @param nums
+     * @param target
+     * @return
+     */
+    public int searchInsert1(int[] nums,int target){
+        int left = 0,right = nums.length;
+        while (left < right){
+            int middle = left + (right - left)/2;
+            if(nums[middle] < left){
+                left = middle + 1;
+            }else {
+                right = middle;
+            }
+        }
+        return left;
+    }
+
+    /**
+     * 左开右开
+     * @param nums
+     * @param target
+     * @return
+     */
+    public int searchInsert2(int[] nums,int target){
+        return 0;
+    }
 }
