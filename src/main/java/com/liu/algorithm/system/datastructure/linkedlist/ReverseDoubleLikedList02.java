@@ -1,6 +1,13 @@
 package com.liu.algorithm.system.datastructure.linkedlist;
 
 public class ReverseDoubleLikedList02 {
+    /**
+     * 反转双链表
+     * 步骤
+     * 1.
+     * @param head
+     * @return
+     */
     public DoubleListNode reverseDoubleLikedList(DoubleListNode head){
         DoubleListNode pre = null;
         DoubleListNode next = null;
