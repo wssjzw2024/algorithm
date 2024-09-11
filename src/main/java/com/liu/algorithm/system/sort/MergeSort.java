@@ -16,6 +16,13 @@ public class MergeSort implements Sort {
         merge(arr, left, mid, right);
     }
 
+    /**
+     * 合并
+     * @param arr
+     * @param left
+     * @param mid
+     * @param right
+     */
     public void merge(int[] arr, int left, int mid, int right) {
         int[] temp = new int[right - left + 1];
         int i = left, j = mid + 1;
