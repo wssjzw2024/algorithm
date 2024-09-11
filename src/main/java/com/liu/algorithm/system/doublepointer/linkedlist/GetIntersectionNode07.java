@@ -7,7 +7,12 @@ import com.liu.algorithm.system.datastructure.linkedlist.SingleListNode;
  * @author liu
  */
 public class GetIntersectionNode07 {
-
+    /**
+     *
+     * @param headA
+     * @param headB
+     * @return
+     */
     public SingleListNode getIntersectionNode(SingleListNode headA, SingleListNode headB) {
         SingleListNode tempA = headA;
         SingleListNode tempB = headB;
